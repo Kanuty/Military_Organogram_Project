@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>JS 21 lesson</title>
+ <link type="text/css" rel="stylesheet" href="org.css" />
+ <script src="https://balkangraph.com/js/latest/OrgChart.js"></script>
+</head>
+<body>
+
+	<div style="width:100%; height:700px;" id="orgchart"/>
+	<div id="tree"/>
+
+
+    <script>
+        let chart = new OrgChart(document.getElementById("orgchart"), {
+           nodeMouseClick: BALKANGraph.action.edit,
+           layout: BALKANGraph.mixed,
+            nodeMenu:{
+            	details: {text:"Details"},
+            	edit: {text:"Edit"},
+            	add: {text:"Add"},
+            	remove: {text:"Remove"}
+            },
+
+            nodeBinding: {
+                field_0: "name",
+                field_1: "city",
+                field_2: "title",
+                img_0: "img",
+              
+            },
+              tags: {
+        "command": {
+            template: "mery"
+      				  }
+   					 }, 
+           
+            nodes: [
+
+            // id 1 - 48
+                { id: 1, name: "12th Mechanized div.", city: "Szczenin", img: "./img/12_DZ.jpg" },
+                 { id: 7, pid: 1, tags: ["command"], name: "12th Command Btn.", city: "Szczecin", img: "" },
+	                { id: 2, pid: 1, name: "2nd Legion Mech. Brigade",city: "Złocieniec", img: "" },
+	                	 { id: 8, pid: 2, name: "Command Battalion", img: "" },
+	                	 //id 9 deleted
+	                	 { id: 10, pid: 2, name: "Tank Battalion",  img: "" },
+	                	 { id: 11, pid: 2, name: "1st Mechanized",  img: "" },
+	                	 { id: 12, pid: 2, name: "2st Mechanized",  img: "" },
+	                	 { id: 13, pid: 2, name: "Self-Propelled Art. Group",  img: "" },
+	                	 { id: 14, pid: 2, name: "Anti-aircraft Group",  img: "" },
+	                	 { id: 15, pid: 2, name: "Reconnaissance Company",  img: "" },
+	                	 { id: 16, pid: 2, name: "Sapper Company",  img: "" },	
+	                	 { id: 17, pid: 2, name: "Logistic Battalion",  img: "" },	
+	                { id: 3, pid: 1, name: "7th Coastal Bde.",city: "Słupsk", img: "" },
+	                	 { id: 18, pid: 3, name: "Command Battalion", city: "Słupsk", img: "" },
+	                	 { id: 19, pid: 3, name: "1st Mech. Btn. Lęborski", city: "Lębork",  img: "" },
+	                	 { id: 20, pid: 3, name: "2th Mech. Btn.",  city: "Słupsk", img: "" },
+	                	 { id: 21, pid: 3, name: "3rd Mech. Btn.", city: "Trzebiatów", img: "" },
+	                	 { id: 22, pid: 3, name: "Self-Propelled Art. Group",  img: "" },
+	                	 { id: 23, pid: 3, name: "Anti-aircraft Group",  img: "" },
+	                	 { id: 24, pid: 3, name: "Reconnaissance Company",  img: "" },
+	                	 { id: 25, pid: 3, name: "Sapper Company",  img: "" },	
+	                	 { id: 26, pid: 3, name: "Logistic Battalion", city: "Słupsk", img: "" },	
+	                { id: 4, pid: 1, name: "12th Mechanized Brigade .",city: "Szczecin", img: "" },
+	                	 { id: 27, pid: 4, name: "Command Battalion", city: "Szczecin", img: "" },
+	                	 { id: 28, pid: 4, name: "1st Mot. Inf. Btn.", city: "Szczecin", img: "" },
+	                	 { id: 29, pid: 4, name: "3rd Mot. Inf. Btn.", city: "Stargard", img: "" },
+	                	 { id: 30, pid: 4, name: "14th Uhlan Battalion", city: "Stargard", img: "" },
+	                	 { id: 31, pid: 4, name: "Self-Propelled Art. Group", city: "Choszczno", img: "" },
+	                	 { id: 32, pid: 4, name: "Anti-aircraft Group",city: "Stargard",  img: "" },
+	                	 { id: 33, pid: 4, name: "Reconnaissance Coy.", city: "Szczecin", img: "" },
+	                	 { id: 34, pid: 4, name: "2nd Engineer Battalion", city: "Stargard", img: "" },	
+	                	 { id: 35, pid: 4, name: "Logistic Battalion", city: "Szczecin", img: "" },
+	                { id: 5, pid: 1, name: "23rd Artillery Regiment.",city: "Sulechów", img: "" },
+	                	 { id: 36, pid: 5, name: "Command Battery", img: "" },
+	                	 { id: 37, pid: 5, name: "1st Self-propelled Artillery Group", city: "Międzyrzecz", img: "" },
+	                	 { id: 38, pid: 5, name: "2nd Self-propelled Artillery Group",  img: "" },
+	                	 { id: 39, pid: 5, name: "3rd Rocet Artillery Group",  img: "" },
+	                	 { id: 40, pid: 5, name: "4th Rocet Artillery Group",  img: "" },
+	                	 { id: 41, pid: 5, name: "Engineer Company",  img: "" },
+	                	 { id: 42, pid: 5, name: "Logistic Battalion",  img: "" },
+	                { id: 6, pid: 1, name: "8th Anti-aircraft Rgt.",city: "Koszalin", img: "" },
+	                	 { id: 43, pid: 6, name: "Command Battery",  img: "" },
+	                	 { id: 44, pid: 6, name: "1st Anti-aircraft Group",  img: "" },
+	                	 { id: 45, pid: 6, name: "2nd Anti-aircraft Group",  img: "" },
+	                	 { id: 46, pid: 6, name: "3rd Anti-aircraft Group",  img: "" },
+	                	 { id: 47, pid: 6, name: "4th Anti-aircraft Group",  img: "" },
+	                	 { id: 48, pid: 6, name: "Logistic Battalion",  img: "" },
+
+
+	             // id 49 - 95
+	            { id: 49, name: "11th Armored Cavalary Div.", city: "Żagań", img: "./img/11cav.jpg" },
+                 { id: 50, pid: 49, tags: ["command"], name: "11th Command Btn.", city: "Żagań", img: "" },
+	                { id: 51, pid: 49, name: "10th Armoured Cavalary Bde.",city: "Świętoszów", img: "" },
+	                	 { id: 56, pid: 51, name: "Command Battalion", city: "Świętoszków", img: "" },
+	                	 { id: 57, pid: 51, name: "1st Tank Battalion",  img: "" },
+	                	 { id: 58, pid: 51, name: "24th Uhlan Battalion",  img: "" },
+	                	 { id: 59, pid: 51, name: "10th Dragoon Mech. Battalion",  img: "" },
+	                	 { id: 60, pid: 51, name: "2nd Self-Propelled Art. Group",  img: "" },
+	                	 { id: 61, pid: 51, name: "Anti-aircraft Group",  img: "" },
+	                	 { id: 62, pid: 51, name: "Reconnaissance Company",  img: "" },
+	                	 { id: 63, pid: 51, name: "Sapper Company",  img: "" },	
+	                	 { id: 64, pid: 51, name: "Logistic Battalion",  img: "" },	
+	                { id: 52, pid: 49, name: "34th Armoured Cavalary Bde.",city: "Żagań", img: "" },
+	                	 { id: 65, pid: 52, name: "Command Battalion", city: "Żagań", img: "" },
+	                	 { id: 66, pid: 52, name: "1st Tank Battalion",  img: "" },
+	                	 { id: 67, pid: 52, name: "2th Uhlan Battalion",  img: "" },
+	                	 { id: 68, pid: 52, name: "Mechanized Battalion",  img: "" },
+	                	 { id: 69, pid: 52, name: "Self-Propelled Art. Group",  img: "" },
+	                	 { id: 70, pid: 52, name: "Anti-aircraft Group",  img: "" },
+	                	 { id: 71, pid: 52, name: "Reconnaissance Company",  img: "" },
+	                	 { id: 72, pid: 52, name: "Sapper Company",  img: "" },	
+	                	 { id: 73, pid: 52, name: "Logistic Battalion",  img: "" },	
+	                { id: 53, pid: 49, name: "17th Mechanized Brigade Bde.",city: "Międzyrzecz", img: "" },
+	                	 { id: 74, pid: 53, name: "Command Battalion", city: "Międzyrzecz", img: "" },
+	                	 { id: 75, pid: 53, name: "1st Mot. Infantry Btn.", city: "Międzyrzecz", img: "" },
+	                	 { id: 76, pid: 53, name: "7th Mounted Rifle Btn.", city: "Wędrzyn", img: "" },
+	                	 { id: 77, pid: 53, name: "15th Uhlan Battalion", city: "Wędrzyn", img: "" },
+	                	 { id: 78, pid: 53, name: "7th Horse Artillery Group", city: "Wędrzyn", img: "" },
+	                	 { id: 79, pid: 53, name: "7th Anti-aircraft Group",city: "Wędrzyn",  img: "" },
+	                	 { id: 80, pid: 53, name: "Reconnaissance Company", city: "Międzyrzec", img: "" },
+	                	 { id: 81, pid: 53, name: "5th Engineer Battalion", city: "Krosno Odrzańskie", img: "" },	
+	                	 { id: 82, pid: 53, name: "Logistic Battalion", city: "Międzyrzec", img: "" },
+	                { id: 54, pid: 49, name: "23rd Artillery Regiment.",city: "Bolesławiec", img: "" },
+	                	 { id: 83, pid: 54, name: "Command Battery", img: "" },
+	                	 { id: 84, pid: 54, name: "1st Self=propelled Artillery Group", city: "Międzyrzecz", img: "" },
+	                	 { id: 85, pid: 54, name: "2nd Rocet Artillery Group",  img: "" },
+	                	 { id: 86, pid: 54, name: "3rd Rocet Artillery Group",  img: "" },
+	                	 { id: 87, pid: 54, name: "4th Rocet Artillery Group",  img: "" },
+	                	 { id: 88, pid: 54, name: "Engineer Company",  img: "" },
+	                	 { id: 89, pid: 54, name: "Logistic Battalion",  img: "" },
+	                { id: 55, pid: 49, name: "4th Anti-aircraft Rgt.",city: "Czerwieńsk", img: "" },
+	                	 { id: 90, pid: 55, name: "Command Battery",  img: "" },
+	                	 { id: 91, pid: 55, name: "1st Anti-aircraft Group",  img: "" },
+	                	 { id: 92, pid: 55, name: "2nd Anti-aircraft Group",  img: "" },
+	                	 { id: 93, pid: 55, name: "3rd Anti-aircraft Group",  img: "" },
+	                	 { id: 94, pid: 55, name: "4th Anti-aircraft Group",  img: "" },
+	                	 { id: 95, pid: 55, name: "Logistic Battalion",  img: "" },
+	                	
+
+            ]
+        }
+
+        );
+
+
+    </script>
+
+
+
+</body>
+</html>

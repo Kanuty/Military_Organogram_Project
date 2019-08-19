@@ -1,0 +1,49 @@
+html, body{
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin:0;
+  overflow: hidden;
+  font-family: Helvetica;
+  background: #333;
+}
+
+#tree{
+  width:100rem;
+  height:100rem;
+}
+/*ligt-blue background*/
+[node-id] rect {
+        fill: #93B4CD;
+}
+/*google green*/
+[node-id='1'] rect, [node-id='2'] rect,[node-id='3'] rect, [node-id='4'] rect, [node-id='8'] rect,[node-id='11'] rect, [node-id='12'] rect, [node-id='7'] rect, [node-id='18'] rect, [node-id='19'] rect, [node-id='20'] rect, [node-id='21'] rect,  [node-id='27'] rect, [node-id='28'] rect, [node-id='29'] rect, [node-id='19'] rect, [node-id='20'] rect, [node-id='21'] rect{
+
+        fill: #3cba54;
+}
+/*google yellow*/
+[node-id='5'] rect, [node-id='13'] rect, [node-id='22'] rect, [node-id='31'] rect, [node-id='36'] rect,[node-id='37'] rect, [node-id='38'] rect, [node-id='39'] rect, [node-id='40'] rect{
+        fill: #f4d50d;
+}
+
+/*orange*/
+[node-id='10'] rect,[node-id='15'] rect,[node-id='24'] rect, [node-id='30'] rect,[node-id='33'] rect{
+        fill: #f4c20d;
+}
+/*grey
+#8e8c91*/
+[node-id='16'] rect,[node-id='25'] rect,[node-id='34'] rect,[node-id='41'] rect,[node-id='47'] rect{
+        fill:  #8e8c91;
+    }
+
+/*purple
+#a791a8*/
+[node-id='17'] rect,[node-id='26'] rect,[node-id='35'] rect,[node-id='42'] rect,[node-id='48'] rect{
+        fill: #a791a8;
+    }
+
+/*Google Blue
+#4885ed*/
+[node-id='6'] rect,[node-id='14'] rect,[node-id='23'] rect,[node-id='32'] rect,[node-id='43'] rect,[node-id='44'] rect,[node-id='45'] rect,[node-id='46'] rect{
+        fill: #4885ed;
+    }
